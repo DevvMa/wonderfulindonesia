@@ -320,7 +320,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/custom-guttenberg-blocks","version":"0.1.0","title":"Custom Guttenberg Blocks","category":"theme","icon":"embed-photo","description":"Custom Guttenberg Blocks Image and Text","example":{},"supports":{"html":false},"attributes":{"content":{"type":"string"},"heading":{"type":"string"},"subheading":{"type":"string"}},"textdomain":"custom-guttenberg-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/custom-guttenberg-blocks","version":"0.1.0","title":"Image & Content","category":"theme","icon":"embed-photo","description":"Custom Guttenberg Blocks Image and Text","example":{},"supports":{"html":false},"attributes":{"content":{"type":"string"},"heading":{"type":"string"},"subheading":{"type":"string"}},"textdomain":"custom-guttenberg-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 
