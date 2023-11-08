@@ -4,7 +4,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
+import { useBlockProps, RichText } from '@wordpress/block-editor';
 
 /**
  * The save function defines the way in which the different attributes should
@@ -25,7 +25,9 @@ export default function save({attributes}) {
 				)
 			}
 			<div className='right-column'>
-				<InnerBlocks.Content/>
+				<RichText.Content className="custom-guttenberg-block-title" tagName="h2" value={attributes.heading}/>
+				<RichText.Content className="custom-guttenberg-block-subtitle" tagName="h4" value={attributes.subheading}/>
+				<RichText.Content className="custom-guttenberg-block-content" tagName="p" value={attributes.content}/>
 			</div>
         </div>
 	);

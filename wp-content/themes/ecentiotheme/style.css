@@ -770,6 +770,11 @@ Requires PHP: 7.2
     color: #FFF;
     text-decoration: none;
   }
+
+  .school-logo-subtext{
+    color: #FFF;
+    font-size: 1rem;
+  }
   
   .school-logo-text--alt-color a {
     color: #666;
@@ -1560,6 +1565,7 @@ Requires PHP: 7.2
     clear: both;
   }
   
+  
   @media (min-width: 960px) {
   
     .main-navigation {
@@ -1595,6 +1601,7 @@ Requires PHP: 7.2
       padding: 0;
     }
   }
+    
   
   .main-navigation .current-menu-item a,
   .main-navigation a:hover {

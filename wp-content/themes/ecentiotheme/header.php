@@ -8,7 +8,7 @@
   <body <?=body_class()?>>
     <header class="site-header">
     <div class="container">
-      <h1 class="school-logo-text float-left"><a href="<?=site_url()?>"><?=get_bloginfo('name')?></a></h1>
+      <h1 class="school-logo-text float-left"><a href="<?=site_url()?>"><?=get_bloginfo('name')?></a><span class="school-logo-subtext"> | <?=get_bloginfo('description')?></span></h1>
       <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i>
       <div class="site-header__menu group">
         <nav class="main-navigation">
