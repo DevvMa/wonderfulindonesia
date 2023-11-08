@@ -8,7 +8,7 @@ import {
 	useBlockProps,
 	MediaPlaceholder,
 	BlockControls,
-	InnerBlocks
+	RichText
 } from '@wordpress/block-editor';
 import { Button, ToolbarGroup, ToolbarButton } from '@wordpress/components';
 
@@ -33,9 +33,6 @@ const {Fragment} = wp.element;
 
 export default function Edit({ attributes, setAttributes}) {
 	const blockProps = useBlockProps();
-    // const onSelectImage = (media) => {
-    //     setAttributes({ imageUrl: media.url });
-    // };
 	return (
 		<fragment>
 			<div {...blockProps}>
@@ -73,35 +70,29 @@ export default function Edit({ attributes, setAttributes}) {
 					)
 				}
 				<div className="right-column">
-					<InnerBlocks
-						allowedBlocks={['core/paragraph', 'core/image', 'core/heading', 'core/list']}
-					/>
+				<RichText
+					tagName="h2"
+					className='custom-guttenberg-block-title'
+					value={attributes.heading}
+					onChange={(value) => setAttributes({ heading:value })}
+					placeholder="Enter the title text"
+				/>
+				<RichText
+					tagName="h4"
+					className='custom-guttenberg-block-subtitle'
+					value={attributes.subheading}
+					onChange={(value) => setAttributes({ subheading:value })}
+					placeholder="Enter the subtitle text"
+				/>
+				<RichText
+					tagName="p"
+					className='custom-guttenberg-block-content'
+					value={attributes.content}
+					onChange={(value) => setAttributes({ content:value })}
+					placeholder="Enter the content text"
+				/>
 				</div>
 			</div>
 		</fragment>
-
-		// <div {...blockProps}>
-		// 	<div className="left-column">
-		// 		<MediaUploadCheck>
-		// 			<MediaUpload
-		// 				onSelect={onSelectImage}
-		// 				allowedTypes={['image']}
-		// 				render={({ open }) => (
-		// 					<Button onClick={open}>
-		// 						{!attributes.imageUrl ? 'Upload Image' : <img src={attributes.imageUrl} alt=""/>}
-		// 					</Button>
-		// 				)}
-		// 			/>
-		// 		</MediaUploadCheck>
-		// 	</div>
-		// 	<div className="right-column">
-		// 		<RichText
-		// 			tagName="p"
-		// 			value={attributes.content}
-		// 			onChange={(content) => setAttributes({ content })}
-		// 			placeholder="Enter your text here..."
-		// 		/>
-		// 	</div>
-		// </div>
 	);
 }

@@ -56,9 +56,6 @@ function Edit({
   setAttributes
 }) {
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)();
-  // const onSelectImage = (media) => {
-  //     setAttributes({ imageUrl: media.url });
-  // };
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("fragment", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...blockProps
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.BlockControls, null, attributes.url && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ToolbarGroup, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ToolbarButton, {
@@ -84,34 +81,31 @@ function Edit({
     }
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "right-column"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks, {
-    allowedBlocks: ['core/paragraph', 'core/image', 'core/heading', 'core/list']
-  }))))
-
-  // <div {...blockProps}>
-  // 	<div className="left-column">
-  // 		<MediaUploadCheck>
-  // 			<MediaUpload
-  // 				onSelect={onSelectImage}
-  // 				allowedTypes={['image']}
-  // 				render={({ open }) => (
-  // 					<Button onClick={open}>
-  // 						{!attributes.imageUrl ? 'Upload Image' : <img src={attributes.imageUrl} alt=""/>}
-  // 					</Button>
-  // 				)}
-  // 			/>
-  // 		</MediaUploadCheck>
-  // 	</div>
-  // 	<div className="right-column">
-  // 		<RichText
-  // 			tagName="p"
-  // 			value={attributes.content}
-  // 			onChange={(content) => setAttributes({ content })}
-  // 			placeholder="Enter your text here..."
-  // 		/>
-  // 	</div>
-  // </div>
-  ;
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+    tagName: "h2",
+    className: "custom-guttenberg-block-title",
+    value: attributes.heading,
+    onChange: value => setAttributes({
+      heading: value
+    }),
+    placeholder: "Enter the title text"
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+    tagName: "h4",
+    className: "custom-guttenberg-block-subtitle",
+    value: attributes.subheading,
+    onChange: value => setAttributes({
+      subheading: value
+    }),
+    placeholder: "Enter the subtitle text"
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+    tagName: "p",
+    className: "custom-guttenberg-block-content",
+    value: attributes.content,
+    onChange: value => setAttributes({
+      content: value
+    }),
+    placeholder: "Enter the content text"
+  }))));
 }
 
 /***/ }),
@@ -229,7 +223,19 @@ function save({
     alt: attributes.alt
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "right-column"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks.Content, null)));
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
+    className: "custom-guttenberg-block-title",
+    tagName: "h2",
+    value: attributes.heading
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
+    className: "custom-guttenberg-block-subtitle",
+    tagName: "h4",
+    value: attributes.subheading
+  }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
+    className: "custom-guttenberg-block-content",
+    tagName: "p",
+    value: attributes.content
+  })));
 }
 
 /***/ }),
@@ -314,7 +320,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/custom-guttenberg-blocks","version":"0.1.0","title":"Custom Guttenberg Blocks","category":"theme","icon":"embed-photo","description":"Custom Guttenberg Blocks Image and Text","example":{},"supports":{"html":false},"textdomain":"custom-guttenberg-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/custom-guttenberg-blocks","version":"0.1.0","title":"Custom Guttenberg Blocks","category":"theme","icon":"embed-photo","description":"Custom Guttenberg Blocks Image and Text","example":{},"supports":{"html":false},"attributes":{"content":{"type":"string"},"heading":{"type":"string"},"subheading":{"type":"string"}},"textdomain":"custom-guttenberg-blocks","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 

@@ -10,8 +10,10 @@
 // 	color: #2d2d2d;
 // 	padding: 2px;
 // }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 .wp-block-create-block-custom-guttenberg-blocks {
+	font-family: 'Poppins', sans-serif;
 	display: grid;
 	grid-template-columns: 1fr 1fr; /* This creates two columns of equal width */
 	gap: 16px; /* This sets the gap between columns */
@@ -19,6 +21,36 @@
 
 	img{
 		width: 100%;
+		object-fit:cover;
 	}
+
+	.custom-guttenberg-block-title,
+	.custom-guttenberg-block-subtitle,
+	.custom-guttenberg-block-content{
+		margin: 0;
+		padding: 0;
+	}
+
+	.custom-guttenberg-block-title{
+		font-weight: 700;
+		font-size: 33px;
+		line-height: 49.5px;
+		color: #F18825;
+		margin-bottom: 5px;
+	}
+	.custom-guttenberg-block-subtitle{
+		font-weight: 600;
+		font-size: 23px;
+		line-height: 34.5px;
+		color: #333333;
+		margin-bottom: 8px;
+	}
+	.custom-guttenberg-block-content{
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 24px;
+		color: #333333;
+	}
+
 }
 
