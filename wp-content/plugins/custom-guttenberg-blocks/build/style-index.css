@@ -1,0 +1,20 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-custom-guttenberg-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* This creates two columns of equal width */
+  gap: 16px; /* This sets the gap between columns */
+  margin-bottom: 20px;
+}
+.wp-block-create-block-custom-guttenberg-blocks img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

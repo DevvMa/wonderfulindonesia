@@ -6,13 +6,16 @@
   "scripts": {
     "gulpwatch": "gulp watch",
     "gulpstyles": "gulp styles",
-    "gulpscripts": "gulp scripts"
+    "gulpscripts": "gulp scripts",
+    "start": "wp-scripts start",
+    "build": "wp-scripts build"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "@wordpress/scripts": "^26.16.0",
     "autoprefixer": "^9.6.1",
     "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.7",
