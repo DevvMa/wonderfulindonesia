@@ -3,7 +3,7 @@
 	"apiVersion": 3,
 	"name": "create-block/custom-guttenberg-blocks",
 	"version": "0.1.0",
-	"title": "Custom Guttenberg Blocks",
+	"title": "Image & Content",
 	"category": "theme",
 	"icon": "embed-photo",
 	"description": "Custom Guttenberg Blocks Image and Text",
